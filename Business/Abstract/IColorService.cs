@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Business.Abstract
 {
-    public interface ICarService
+    public interface IColorService
     {
-        List<Car> GetAll();
-
-        List<Car> GetByDailyPrice(decimal min , decimal max);
+        List<Color> GetAll();
     }
 }
