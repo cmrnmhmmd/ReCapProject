@@ -12,30 +12,35 @@ namespace ConsoleUI
         {
             CarManager carManager = new CarManager(new EfCarDal());
 
-            
-
-            foreach (var cars in carManager.GetAll())
+            foreach (var car in carManager.GetCarDetail())
             {
-                Console.WriteLine(cars.CarId+" "+cars.ColorId+" "+cars.Description);
+                Console.WriteLine(car.BrandName +" "+ car.Description+" "+car.ColorName);
 
             }
-            Console.WriteLine("*******************************");
 
-            foreach (var car in carManager.GetByDailyPrice(65000,125000))
-            {
-                Console.WriteLine(car.Description);
-            }
+            //foreach (var cars in carManager.GetAll())
+            //{
+            //    Console.WriteLine(cars.CarId+" "+cars.ColorId+" "+cars.Description);
 
-            Console.WriteLine("***********************");
+            //}
+            //Console.WriteLine("*******************************");
+
+            //foreach (var car in carManager.GetByDailyPrice(65000,125000))
+            //{
+            //    Console.WriteLine(car.Description);
+            //}
+
+            //Console.WriteLine("***********************");
 
             BrandManager brandManager = new BrandManager(new EfBrandDal());
 
-            foreach (var brand in brandManager.GetAll())
-            {
-                Console.WriteLine(brand.BrandId+" "+brand.BrandName);
+            ////foreach (var brand in brandManager.GetAll())
+            ////{
+            ////    Console.WriteLine(brand.BrandId+" "+brand.BrandName);
 
-            }
+            ////}
 
+            //brandManager.Add(new Entities.Concrete.Brand {BrandName="Fiat" });
 
 
 
