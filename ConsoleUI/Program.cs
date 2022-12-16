@@ -1,6 +1,7 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
+using Entities.Concrete;
 using System;
 
 
@@ -12,35 +13,47 @@ namespace ConsoleUI
         {
             CarManager carManager = new CarManager(new EfCarDal());
 
-            foreach (var car in carManager.GetCarDetail())
-            {
-                Console.WriteLine(car.BrandName +" "+ car.Description+" "+car.ColorName);
+            //foreach (var car in carManager.GetCarDetail())
+            //{
+            //    Console.WriteLine(car.BrandName +" "+ car.Description+" "+car.ColorName+" "+car.DailyPrice);
 
-            }
+            //}
 
             //foreach (var cars in carManager.GetAll())
             //{
-            //    Console.WriteLine(cars.CarId+" "+cars.ColorId+" "+cars.Description);
+            //   Console.WriteLine(cars.CarId+" "+cars.ColorId+" "+cars.Description);
 
             //}
-            //Console.WriteLine("*******************************");
+
 
             //foreach (var car in carManager.GetByDailyPrice(65000,125000))
             //{
             //    Console.WriteLine(car.Description);
             //}
 
-            //Console.WriteLine("***********************");
+            var result = carManager.Add(new Car { BrandId = 3, ColorId = 3, DailyPrice = 210000, Description = "A", ModelYear = 2021 }).Message;
+
+            
+
+
+
 
             BrandManager brandManager = new BrandManager(new EfBrandDal());
 
-            ////foreach (var brand in brandManager.GetAll())
-            ////{
-            ////    Console.WriteLine(brand.BrandId+" "+brand.BrandName);
+            //foreach (var brand in brandManager.GetAll())
+            //{
+            //    Console.WriteLine(brand.BrandId+" "+brand.BrandName);
 
-            ////}
+            //}
 
-            //brandManager.Add(new Entities.Concrete.Brand {BrandName="Fiat" });
+            //brandManager.Add(new Entities.Concrete.Brand {BrandName="McLaren" });
+
+            //brandManager.Delete(new Brand { BrandId = 3002 });
+
+            // brandManager.Update(new Brand { BrandId = 2002, BrandName = "Jeep", });
+
+
+            ColorManager colorManager = new ColorManager(new EfColorDal());
 
 
 
