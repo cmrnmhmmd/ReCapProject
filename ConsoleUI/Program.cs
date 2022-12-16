@@ -11,6 +11,17 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+
+            UserManager userManager = new UserManager(new EfUserDal());
+
+            //var result = userManager.Add(new User { FirstName = "Elif Lina", LastName = "Çimrin", Email = "elif@gmail.com", Password = "elif123" }).Message;
+
+             
+            
+
+
+
+
             CarManager carManager = new CarManager(new EfCarDal());
 
             //foreach (var car in carManager.GetCarDetail())
@@ -31,7 +42,7 @@ namespace ConsoleUI
             //    Console.WriteLine(car.Description);
             //}
 
-            var result = carManager.Add(new Car { BrandId = 3, ColorId = 3, DailyPrice = 210000, Description = "A", ModelYear = 2021 }).Message;
+            //var result = carManager.Add(new Car { BrandId = 3, ColorId = 3, DailyPrice = 210000, Description = "A", ModelYear = 2021 }).Message;
 
             
 

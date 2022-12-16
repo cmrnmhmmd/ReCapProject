@@ -6,6 +6,9 @@ namespace Business.Constants
 {
     public static class Messages
     {
+        public static string Added = "Ekleme Başarılı";
+        public static string Deleted = "Silme Başarılı";
+        public static string Updated = "Güncelleme başarılı";
         public static string CarAdded = "Araba Eklendi";
         public static string ColorAdded = "Renk Eklendi";
         public static string BrandAdded = "Araba Marka Eklendi";
